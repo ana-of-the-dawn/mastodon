@@ -352,8 +352,7 @@ by @nileane@nileane.fr
 body.app-body {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  font-family: 'Atkinson Hyperlegible Next', Calibri, Roboto, ui-rounded,
-    sans-serif;
+  font-family: mastodon-font-sans-serif, ui-rounded, sans-serif !important;
 }
 
 .layout-single-column .ui::before {
@@ -4565,7 +4564,10 @@ div[tabindex='-1']
     position: fixed;
   }
 
-  .app-body:not(.layout-multiple-columns, :has(.ui .ui__header__links > .button[href='/auth/sign_in']))
+  .app-body:not(
+      .layout-multiple-columns,
+      :has(.ui .ui__header__links > .button[href='/auth/sign_in'])
+    )
     .tabs-bar__wrapper {
     z-index: 3;
   }
